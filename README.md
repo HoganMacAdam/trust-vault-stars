@@ -10,9 +10,6 @@ Privacy-first decentralized reputation system with FHE encrypted trust scores.
 
 The project demo video is included in the repository: `trust-vault-stars.mp4`
 
-## 📦 Repository
-
-**GitHub Repository**: [https://github.com/duan-hb/trust-vault-stars](https://github.com/duan-hb/trust-vault-stars)
 
 ## Overview
 
