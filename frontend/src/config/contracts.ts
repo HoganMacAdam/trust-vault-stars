@@ -3,13 +3,13 @@ import { Address } from 'viem';
 // Contract addresses for different networks
 export const CONTRACT_ADDRESSES: Record<number, Address> = {
   // Hardhat local network
-  31337: '0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512' as Address,
+  31337: '0x5FbDB2315678afecb367f032d93F642f64180aa3' as Address,
   // Sepolia testnet
   11155111: (import.meta.env.VITE_SEPOLIA_CONTRACT_ADDRESS || '0x0000000000000000000000000000000000000000') as Address,
 };
 
 // Default contract address (for Hardhat local)
-export const DEFAULT_CONTRACT_ADDRESS = '0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512' as Address;
+export const DEFAULT_CONTRACT_ADDRESS = '0x5FbDB2315678afecb367f032d93F642f64180aa3' as Address;
 
 /**
  * Get contract address for a given chain ID

@@ -82,7 +82,7 @@ const SubmitRating = () => {
                 placeholder="0x..."
                 value={ratedUser}
                 onChange={(e) => setRatedUser(e.target.value)}
-                disabled={isSubmitting || isPending}
+                disabled={isSubmitting}
                 required
                 className="h-12 bg-background/50 border-border/50 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
               />
@@ -99,14 +99,14 @@ const SubmitRating = () => {
                     key={value}
                     type="button"
                     onClick={() => setScore(value)}
-                    disabled={isSubmitting || isPending}
+                    disabled={isSubmitting}
                     className={`
                       relative p-3 rounded-lg transition-all duration-300 transform
                       ${score === value
                         ? "bg-gradient-to-br from-primary to-secondary scale-110 shadow-lg glow-primary"
                         : "bg-background/50 hover:bg-background/80 hover:scale-105"
                       }
-                      ${isSubmitting || isPending ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}
+                      ${isSubmitting ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}
                     `}
                   >
                     <Star
@@ -131,7 +131,7 @@ const SubmitRating = () => {
 
             <Button
               type="submit"
-              disabled={isSubmitting || isPending || !ratedUser}
+              disabled={isSubmitting || !ratedUser}
               className="w-full h-12 text-base font-semibold bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 glow-primary hover:scale-[1.02] transition-all duration-300"
             >
               {isSubmitting || isPending ? (
